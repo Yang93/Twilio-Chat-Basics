@@ -17,7 +17,7 @@ enable :sessions
 # create an endpoint to handle incoming requests from Twilio
 get "/sms/incoming" do
   session["counter"] ||= 1
-  body = params[:Body] || “"
+  body = params[:Body] || ""
 
   twiml = Twilio::TwiML::MessagingResponse.new do |r|
     r.message do |m|
