@@ -8,9 +8,6 @@ configure :development do
   Dotenv.load
 end
 
-get '/sms/incoming' do
-  
-end
 
 enable :sessions
 
