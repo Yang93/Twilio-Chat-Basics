@@ -21,7 +21,7 @@ get "/sms/incoming" do
 
   twiml = Twilio::TwiML::MessagingResponse.new do |r|
     r.message do |m|
-      m.body( "You said: " + body + “\n It’s message number #{ session["counter"] }” )
+      m.body( "You said: " + body + "\n It’s message number #{ session["counter"] } ")
    end
   end
   session["counter"] += 1
